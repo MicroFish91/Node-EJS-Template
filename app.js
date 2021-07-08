@@ -6,6 +6,8 @@ const morgan = require("morgan");
 // const passport = require('passport');
 const app = express();
 
+app.use(helmet()); // Secure header
+
 // Log Traffic
 if (app.get("env") === "development") {
   app.use(morgan("tiny"));
